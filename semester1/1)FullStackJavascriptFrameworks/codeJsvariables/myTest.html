@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        const cat = {
+            name: 'test',
+            adf: 'aaa',
+            mylist: ['a', 'b'],
+            test: {
+                a: 1,
+                b: 2
+            }
+        };
+        const name = 'myname';
+        console.log('typeof cat', typeof (cat))
+        console.log('typeof cat.mylist', typeof (cat.mylist))
+        console.log('cat', cat)
+
+        const myobj = {
+            name
+        }
+        console.log('myobj', myobj)
+
+        const x = 2;       // Allowed
+        //const x = 3;       // Not allowed
+        //x = 3;             // Not allowed
+        var y = 3;         //  allowed
+        //let y = 3;         // Not allowed
+
+        {
+            const x = 3;   // Allowed
+            //x = 3;         // Not allowed
+            let y = 3;     // allowed
+        }
+
+        Object.freeze(cat);
+        cat.name = 'newName';
+        console.log('cat', cat)
+        cat.test.a = 20;
+        console.log('cat', cat)
+        test1()
+        function test1() {
+            this.a = 'a';
+            console.log('this1', this)
+
+            function test1a() {
+                console.log('this1a', this)
+                console.log('this.a', this.a)
+
+            }
+            const test1b = () => {
+                console.log('this1b', this)
+                console.log('this.a', this.a)
+
+            }
+            test1a();
+            test1b();
+        }
+    </script>
+
+</body>
+
+</html>
