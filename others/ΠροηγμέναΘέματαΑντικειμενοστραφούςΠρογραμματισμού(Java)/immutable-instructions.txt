@@ -1,0 +1,8 @@
+1. Remove SEtters
+2. Add all args constructor ot the class
+3. Mark calss as final to prevent inheritance
+4. Initialize all non-primitive mutalble fields via constructor only by performing deep copy
+5. For all non-primitive mutable fields getter methods, perform cloning
+
+## Controversial
+6. Mark all class attributes as final (optional, be careful)
