@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="exp"></p>
+
+<script>
+
+//----------------arrow - anonymous--------
+var result1,result2;
+
+	// Traditional Anonymous Function
+	result1 = function (a){
+	  return a + 10;
+	}
+
+	// Arrow Function 
+	result2 = a => a + 100;
+
+	console.log(result1(10)+" "+result2(20)); 
+
+	// Traditional Function
+	function nameme (y){
+	  return y + 1;
+	}
+
+	// Arrow Function
+	var nameme2 = y => y + 1;
+
+	var second= (x, y, z) => x + y+ z + 10;
+
+   console.log(nameme(10)+" "+nameme2(20)+"  "+second(1,2,3)); 
+
+
+</script>
+
+</body>
+</html>
+
+

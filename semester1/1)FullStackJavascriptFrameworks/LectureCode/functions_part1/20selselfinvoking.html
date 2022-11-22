@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="exp"></p>
+
+<script>
+
+//-------SELF-INVOKE----------
+(function (a) {
+  document.getElementById("demo").innerHTML = "Hello! How are you?"+a;
+})(1);
+</script>
+
+</body>
+</html>
+
+
