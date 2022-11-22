@@ -61,7 +61,7 @@ def generate_numeric_histograms(data: pd.DataFrame, figures_path=FIGURES_PATH,
         col_series = data[col_name]
         title_str = "{} Probability Density:".format(numerical_attributes[index])
         plot_histogram(col_series, title_str)
-    data.hist(bins=50, figsize=(20,15))
+    # data.hist(bins=50, figsize=(20, 15))
     # plt.show()
 
 
@@ -86,10 +86,48 @@ def main():
     # LOAD HOUSING DATA
     housing = load_housing_data()
     # report_attributes(housing)
-    generate_numeric_histograms(housing)
+    # generate_numeric_histograms(housing)
+
+    housing["income_cat"] = pd.cut(housing["median_income"], bins=[0.0, 1.5, 3.0, 4.5, 6.0, np.inf],
+                                   labels=[1, 2, 3, 4, 5])
+    plot_histogram(housing["income_cat"], "Income Category Probability Density Distribution")
+
+    # Perform a random partitioning of the dataset into training and testing subsets.
+    train_set, test_set = train_test_split(housing, test_size=0.2, random_state=42)
+
+    # Perform stratified sampling based on the income_cat categorical attribute
+    split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+    for train_index, test_index in split.split(housing, housing["income_cat"]):
+        print("TRAIN:", train_index)
+        print("TEST:", test_index)
+        strat_train_set = housing.loc[train_index]
+        strat_test_set = housing.loc[test_index]
+
+        # Generate 3 additional serives to count the frequency of each income category within:
+        # (a): the original dataframe,
+        # (b): the randomly sampled dataframe
+        # (c): the stratified sampled dataframe
+        overall_series = housing["income_cat"].value_counts() / len(housing)
+        overall_series.rename("overall")
+        stratified_series = strat_test_set["income_cat"].value_counts() / len(test_set)
+        stratified_series.rename("stratified")
+        random_series = test_set["income_cat"].value_counts() / len(test_set)
+        random_series.rename("random")
+
+        # Create a new dataframe object by combining the previously defined series objects
+        income_df = pd.concat([overall_series, stratified_series, random_series], axis=1)
+
+        for set_ in (strat_train_set, strat_test_set):
+            set_.drop("income_cat", axis=1, inplace=True)
+        print()
+
+    # remove the income category attribute from the original housing dataframe
+
+
     print()
-    # test_housing_values(housing)
 
 
+# MAIN PROGRAM: PHASE II
+# Create an additional income category attribute with five categories
 if __name__ == '__main__':
     main()
