@@ -1,0 +1,30 @@
+<head> 
+<script type="text/javascript" language="javascript"> 
+
+function show(id) { 
+	
+	var obj = document.getElementById(id); 
+   
+	obj.style.visibility = ''; 
+ 
+} 
+
+function hide(id) { 
+	
+	var obj = document.getElementById(id); 
+   
+	obj.style.visibility = 'hidden';
+
+} 
+
+</script> 
+</head> 
+... 
+<a href="#" onMouseOver="hide('info')" onMouseOut="show('info')">Hide Table</a> 
+<br>
+<table border=1 id="info" style="visibility:show">
+<tr><td>table cell 1</td></tr> 
+<tr><td>table cell 2</td></tr>
+<tr><td>table cell 3</td></tr>
+</table>
+<p>Paragraph after table.</p>

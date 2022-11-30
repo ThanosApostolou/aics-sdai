@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<!-- Form Design Example 3 -->
+
+<head>
+   <title>Another Form</title>
+</head>
+
+<body>
+
+   <h1>Feedback Form</h1>
+
+   <p>Please fill out this form to help us improve our site.</p>
+
+   <form method = "post" action = "/cgi-bin/formmail">
+
+   <p>
+      <input type = "hidden" name = "recipient"
+         value = "deitel@deitel.com">
+      <input type = "hidden" name = "subject" 
+         value = "Feedback Form">
+      <input type = "hidden" name = "redirect" 
+         value = "main.html"> 
+   </p>
+
+   <p>Name: 
+      <input name = "name" type = "text" size = "25">
+   </p>
+ 
+   <p>Comments: 
+      <textarea name = "comments" rows = "4" cols = "36"></textarea>
+   </p>
+
+   <p>Email Address: 
+      <input name = "email" type = "password" size = "25">
+   </p>
+
+   <p>
+      <strong>Things you liked:</strong><br>
+
+      Site design
+      <input name = "things" type = "checkbox" value = "Design">
+      
+       
+      Links
+      <input name = "things" type = "checkbox" value = "Links">
+      
+
+      Ease of use
+      <input name = "things" type = "checkbox" value = "Ease">
+      
+
+      Images 
+      <input name = "things" type = "checkbox" value = "Images">
+      
+
+      Source code
+      <input name = "things" type = "checkbox" value = "Code">
+      
+   </p>
+
+   <!-- <input type = "radio"> creates a radio button. The     -->
+   <!-- difference between radio buttons and checkboxes is     -->
+   <!-- that only one radio button in a group can be selected  -->
+   <p>
+      <strong>How did you get to our site?:</strong><br>
+
+      Search engine
+      <input name = "how get to site" type = "radio"
+         value = "search engine" checked>
+      
+      Links from another site
+      <input name = "how get to site" type = "radio" 
+         value = "link">
+
+      Google.com Web site
+      <input name = "how get to site" type = "radio" 
+         value = "google.com">       
+
+      Reference in a book
+      <input name = "how get to site" type = "radio" 
+         value = "book">     
+
+     Other
+      <input name = "how get to site" type = "radio" 
+         value = "other">
+       
+   </p>
+
+   <!-- The <select> tag presents a drop down menu with -->
+   <!-- choices indicated by the <option> tags          -->
+   <p>
+      Rate our site: 
+
+      <select name = "rating">
+         <option selected>Amazing:-)</option>
+         <option>10</option>
+         <option>9</option>
+         <option>8</option>
+         <option>7</option>
+         <option>6</option>
+         <option>5</option>
+         <option>4</option>
+         <option>3</option>
+         <option>2</option>
+         <option>1</option>
+         <option>The Pits:-(</option>
+      </select>
+
+      
+   </p>
+
+   <p>
+      <input type = "submit" value = "Submit Your Entries"> 
+      <input type = "reset" value = "Clear Your Entries">
+   </p>   
+
+   </form>
+
+</body>
+</html>

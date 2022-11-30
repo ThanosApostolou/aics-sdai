@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>Form</TITLE>  
+
+<SCRIPT LANGUAGE = "JavaScript">
+
+function setfocus()
+{
+	document.forms[0].myAge.focus();
+}
+
+
+function validate()
+{
+
+x=document.myForm;
+
+at=x.myEmail.value.indexOf("@");
+
+age=x.myAge.value;
+
+firstname=x.myName.value;
+
+submitOK="True";
+
+if (at==-1) 
+ {
+ alert("Not a valid e-mail");
+ submitOK="False";
+ }
+if (age<1 || age>100)
+ {
+ alert("Your age must be between 1 and 100");
+ submitOK="False";
+ }
+if (firstname.length>10)
+ {
+ alert("Your name must be less than 10 letters");
+ submitOK="False";
+ }
+if (submitOK=="False")
+ {
+ return false;
+ }
+}
+
+
+</script>
+
+</HEAD>
+<BODY>
+
+<form name="myForm" action="form.html" onsubmit="return validate()">
+
+<input type="button" value="Set Focus" onclick="setfocus()"> 
+<br><br>
+
+e-mail: 
+<input type="text" name="myEmail"> 
+<br>
+Age, value from 1 to 100: 
+<input type="text" name="myAge">
+<br>
+First name, max 10 letters: 
+<input type="text" name="myName">
+<br><br>
+<input type="submit" value="submit"> 
+</form>
+
+</BODY>
+</HTML>  
+
