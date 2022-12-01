@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = santaDecision([
+    {
+        name: "Angelina Jolie",
+        status: "good"
+    },
+    {
+        name: "Severus Snape",
+        status: "good"
+    },
+    {
+        name: "Voldermort",
+        status: "bad"
+    },
+    {
+        name: "Malfoy",
+        status: "bad"
+    },
+    {
+        name: "Professor",
+        status: "good"
+    }
+]);
+
+function santaDecision(arr){
+  var text="";
+ //list of keys
+ for(element in arr){
+    console.log(arr[element]);
+    console.log( arr[element]["name"]+"  "+ arr[element].status);
+    
+ }
+ //list of values
+  for(element of arr){
+      if(element.status=="good"){
+          text+=element['name']+" Gets a present <br>"
+    console.log(text)
+      }else{
+        text+=element.name+" does not a present <br>"
+      }
+  }
+  return text;
+}
+
+</script>
+
+</body>
+</html>
+

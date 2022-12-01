@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.democlass1 {
+  color: red;
+}
+.democlass2 {
+  color: blue;
+}
+.democlass3 {
+  color: yellow;
+}
+.democlass4 {
+  color: green;
+}
+</style>
+</head>
+<body>
+
+
+<p>Click the button to display the value of the class attribute of the p elements.</p>
+
+
+<p class="democlass4"> This class is Red</p>
+<p class="democlass2"> This class is Blue</p>
+<p class="democlass3"> This class is Yellow</p>
+
+<button id="btn" onclick="dispAttribs()">Try it</button>
+
+<p id="demo"></p>
+
+
+<script>
+
+function dispAttribs() {
+	var messg=[], attribs = document.getElementsByTagName("p");
+
+	for (var i = 0; i < attribs.length; i++) {
+
+		if (attribs[i].getAttribute("class")!=null){
+		     messg.push(attribs[i].getAttribute("class"));
+	     }else{
+	     	attribs[i].setAttribute("class","democlass1");
+	     }
+		console.log(messg);
+		}
+	document.getElementById("demo").innerHTML = messg.join(",");
+   document.getElementById("btn").remove();
+ 
+}
+
+</script>
+
+</body>
+</html>
