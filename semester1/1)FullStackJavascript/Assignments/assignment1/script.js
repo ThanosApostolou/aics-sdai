@@ -9,21 +9,22 @@
 ////////
 // Task 2: Register
 ////////
-class Student {
-    constructor(name, surname, avgScore) {
-        this.name = name;
-        this.surname = surname;
-        this.avgScore = avgScore;
-    }
 
-    toHtml() {
-        const studentLine = '' + this.name + ' '
-            + this.surname + ' has average grade: '
-            + this.avgScore;
-        const studentHtml = '<p>' + studentLine + '</p>';
-        return studentHtml;
-    }
+// Student object constructor function. We could use class instead as we do with FormModel below.
+function Student(name, surname, avgScore) {
+    this.name = name;
+    this.surname = surname;
+    this.avgScore = avgScore;
 }
+
+Student.prototype.toHtml = function () {
+    const studentLine = '' + this.name + ' '
+        + this.surname + ' has average grade: '
+        + this.avgScore;
+    const studentHtml = '<p>' + studentLine + '</p>';
+    return studentHtml;
+}
+
 
 class FormModel {
     constructor(
@@ -42,6 +43,7 @@ class FormModel {
         this.numJava = numJava;
     }
 
+    // Πρόσθεσα μερικά επιπλέον validations όπως να μην είναι κενά τα Name, Surname και να είναι οι βαθμόι μεταξύ 0 και 100.
     validate() {
         const errors = [];
         if (!this.name) {
@@ -127,7 +129,7 @@ function register() {
     // Αφού πατηθεί για πρώτη φορά το κουμπί Register, αλλάζει το κείμενό του και αντί για Register δείχνει Add another user
     // Θα μπορούσαμε να κάνουμε τον έλεγχο και με μια boolean
     if (students.length === 1) {
-        document.getElementById('register').innerHTML = 'Add another user'
+        document.getElementById('register').innerHTML = 'Add another user';
     }
 }
 
