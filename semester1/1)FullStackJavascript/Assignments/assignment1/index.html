@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
 <body>
-    <label for="name">Name 1:</label><br>
-    <input type="text" id="name" name="name"><br>
+    <div class="container-fluid">
+        <label for="name">Name 1:</label><br>
+        <input type="text" id="name" name="name"><br>
 
-    <label for="surname">Surname:</label><br>
-    <input type="text" id="surname" name="surname"><br>
+        <label for="surname">Surname:</label><br>
+        <input type="text" id="surname" name="surname"><br>
 
-    <label for="numMaths">Maths:</label><br>
-    <input type="number" id="numMaths" name="numMaths" min="0" max="100"><br>
+        <label for="numMaths">Maths:</label><br>
+        <input type="number" id="numMaths" name="numMaths" min="0" max="100"><br>
 
-    <label for="numCsharp">C#:</label><br>
-    <input type="number" id="numCsharp" name="numCsharp" min="0" max="100"><br>
+        <label for="numCsharp">C#:</label><br>
+        <input type="number" id="numCsharp" name="numCsharp" min="0" max="100"><br>
 
-    <label for="numJS">JavaScript:</label><br>
-    <input type="number" id="numJS" name="numJS" min="0" max="100"><br>
+        <label for="numJS">JavaScript:</label><br>
+        <input type="number" id="numJS" name="numJS" min="0" max="100"><br>
 
-    <label for="numJava">Java:</label><br>
-    <input type="number" id="numJava" name="numJava" min="0" max="100"><br>
+        <label for="numJava">Java:</label><br>
+        <input type="number" id="numJava" name="numJava" min="0" max="100"><br>
 
-    <button id="register" onclick="register()">Register</button>
-    <button id="display" onclick="display()">Display</button>
+        <button id="register" onclick="register()">Register</button>
+        <button id="display" onclick="display()">Display</button>
 
-    <div id="result"></div>
+        <div id="result"></div>
+    </div>
 
     <script src="./script.js"></script>
 </body>
