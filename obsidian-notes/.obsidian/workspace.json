@@ -1,0 +1,151 @@
+{
+  "main": {
+    "id": "f7083eaa9395dd98",
+    "type": "split",
+    "children": [
+      {
+        "id": "a938cff06e34f98e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8a885eccbac794c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem1/2-AdvancedPython/2-AdvancedPython.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0a727b3c75314d5e",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d7504afaf01b17c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65086b228cabbbfc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "87f7e33c2806f7de",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a084a571c35d4c15",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "803ce60f38f54377",
+    "type": "split",
+    "children": [
+      {
+        "id": "fbcd757c5b9f48a8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "abd373a781b0a374",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "sem1/2-AdvancedPython/2-AdvancedPython.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5cc449d78a3072cd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "sem1/2-AdvancedPython/2-AdvancedPython.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bc4326592efcbcee",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c8b7ec7916b67ea8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "sem1/2-AdvancedPython/2-AdvancedPython.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "8a885eccbac794c2",
+  "lastOpenFiles": [
+    "sem1/1-FullStackJavascript/1-FullStackJavascript.md",
+    "sem1/Sem1.md",
+    "sem1/4-PatternRecognitionMachineLearning/4-PatternRecognitionMachineLearning.md",
+    "sem1/3-WebDevelopment/3-WebDevelopment.md",
+    "sem1/5-SoftwareEngineering/5-SoftwareEngineering.md",
+    "sem1/6-ArtificialIntelligence/6-ArtificialIntelligence.md",
+    "AICS-SDAI.md",
+    "sem1/2-AdvancedPython/2-AdvancedPython.md"
+  ]
+}
