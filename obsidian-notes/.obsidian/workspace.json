@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem1/2-AdvancedPython/2-AdvancedPython.md",
-                "mode": "source",
+                "file": "sem1/Sem1.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sem1/2-AdvancedPython/2-AdvancedPython.md",
+                "file": "sem1/Sem1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sem1/2-AdvancedPython/2-AdvancedPython.md",
+                "file": "sem1/Sem1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "sem1/2-AdvancedPython/2-AdvancedPython.md"
+                "file": "sem1/Sem1.md"
               }
             }
           }
@@ -139,13 +139,13 @@
   },
   "active": "8a885eccbac794c2",
   "lastOpenFiles": [
+    "sem1/4-PatternRecognitionMachineLearning/4-PatternRecognitionMachineLearning.md",
+    "sem1/2-AdvancedPython/2-AdvancedPython.md",
     "sem1/1-FullStackJavascript/1-FullStackJavascript.md",
     "sem1/Sem1.md",
-    "sem1/4-PatternRecognitionMachineLearning/4-PatternRecognitionMachineLearning.md",
     "sem1/3-WebDevelopment/3-WebDevelopment.md",
     "sem1/5-SoftwareEngineering/5-SoftwareEngineering.md",
     "sem1/6-ArtificialIntelligence/6-ArtificialIntelligence.md",
-    "AICS-SDAI.md",
-    "sem1/2-AdvancedPython/2-AdvancedPython.md"
+    "AICS-SDAI.md"
   ]
 }

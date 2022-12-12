@@ -32,6 +32,8 @@
                         "style": "kebab-case"
                     }
                 ],
+                "@angular-eslint/no-empty-lifecycle-method": "warn",
+                "@typescript-eslint/no-empty-function": "warn",
                 "indent": [
                     "warn",
                     2
