@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import StratifiedShuffleSplit
+from pandas.plotting import scatter_matrix
 
 # GLOBAL VARIABLES DEFINITION
 DOWNLOAD_ROOT = "https://raw.githubusercontent.com/ageron/handson-ml2/master/"
@@ -97,6 +98,8 @@ def main():
 
     # Perform stratified sampling based on the income_cat categorical attribute
     split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+    strat_train_set = None
+    strat_test_set = None
     for train_index, test_index in split.split(housing, housing["income_cat"]):
         print("TRAIN:", train_index)
         print("TEST:", test_index)
@@ -121,10 +124,60 @@ def main():
             set_.drop("income_cat", axis=1, inplace=True)
         print()
 
-    # remove the income category attribute from the original housing dataframe
+    housing = strat_train_set.copy()
+    housing.plot(kind="scatter", x="longitude", y="latitude", alpha=0.4,
+                 s=housing["population"] / 100, label="population", figsize=(10, 8),
+                 c="median_house_value", cmap=plt.get_cmap("jet"), colorbar=True,
+                 sharex=False)
+    plt.legend()
+    figure_url = os.path.join(FIGURES_PATH, "HousingHeatMap.png")
+    figure_url = os.path.join(FIGURES_PATH, "HousingHeatMap.png")
+    plt.savefig(figure_url, dpi=100, format='png', bbox_inches='tight')
+    plt.show()
 
+    # Compute the correlation matrix between every pair of attributes.
+    corr_matrix = housing.corr()
+    # Compute the degree of correlation between each attribute and the median
+    # house value.
+    median_house_value_corr = corr_matrix["median_house_value"].sort_values(
+        ascending=False)
 
-    print()
+    # Define a promising set of house attributes and generate their pairwise
+    # scatter plots.
+    attributes = ["median_house_value", "median_income", "total_rooms",
+                  "housing_median_age"]
+    scatter_matrix(housing[attributes], figsize=(12, 8))
+    # Save figure.
+    figure_url = os.path.join(FIGURES_PATH, "AttributesCorrelation.png")
+    plt.savefig(figure_url, dpi=100, format='png', bbox_inches='tight')
+    plt.show()
+
+    # The most promising house attribute turns out to be the median income.
+    # Visualize the scatter plot between median house value and median income.
+    housing.plot(kind="scatter", x="median_income", y="median_house_value",
+                 alpha=0.1)
+    # Save figure.
+    figure_url = os.path.join(FIGURES_PATH, "IncomePriceCorrelation.png")
+    plt.savefig(figure_url, dpi=100, format='png', bbox_inches='tight')
+    plt.show()
+
+    # Consider the following combinations of the original housing attributes.
+    housing["rooms_per_household"] = housing["total_rooms"] / housing["households"]
+    housing["bedrooms_per_room"] = housing["total_bedrooms"] / housing["total_rooms"]
+    housing["population_per_household"] = housing["population"] / housing["households"]
+
+    # Compute the correlation matrix between every pair of attributes.
+    corr_matrix_new = housing.corr()
+    # Compute the degree of correlation between each attribute and the median
+    # house value.
+    new_median_house_value_corr = corr_matrix_new["median_house_value"].sort_values(
+        ascending=False)
+    # Compute the correlation matrix between every pair of attributes.
+    corr_matrix_new = housing.corr()
+    # Compute the degree of correlation between each attribute and the median
+    # house value.
+    new_median_house_value_corr = corr_matrix_new["median_house_value"].sort_values(
+        ascending=False)
 
 
 # MAIN PROGRAM: PHASE II
