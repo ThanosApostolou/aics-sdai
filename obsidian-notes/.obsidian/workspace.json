@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem1/Sem1.md",
+                "file": "sem1/1-FullStackJavascript/1-FullStackJavascript.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
             }
+          },
+          {
+            "id": "6c9a0a0138c6735b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem1/1-FullStackJavascript/lesson6-20221213.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sem1/Sem1.md",
+                "file": "sem1/1-FullStackJavascript/lesson6-20221213.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sem1/Sem1.md",
+                "file": "sem1/1-FullStackJavascript/lesson6-20221213.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "sem1/Sem1.md"
+                "file": "sem1/1-FullStackJavascript/lesson6-20221213.md"
               }
             }
           }
@@ -137,15 +151,16 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8a885eccbac794c2",
+  "active": "6c9a0a0138c6735b",
   "lastOpenFiles": [
+    "sem1/1-FullStackJavascript/1-FullStackJavascript.md",
+    "sem1/1-FullStackJavascript/lesson6-20221213.md",
+    "sem1/Sem1.md",
+    "AICS-SDAI.md",
     "sem1/4-PatternRecognitionMachineLearning/4-PatternRecognitionMachineLearning.md",
     "sem1/2-AdvancedPython/2-AdvancedPython.md",
-    "sem1/1-FullStackJavascript/1-FullStackJavascript.md",
-    "sem1/Sem1.md",
     "sem1/3-WebDevelopment/3-WebDevelopment.md",
     "sem1/5-SoftwareEngineering/5-SoftwareEngineering.md",
-    "sem1/6-ArtificialIntelligence/6-ArtificialIntelligence.md",
-    "AICS-SDAI.md"
+    "sem1/6-ArtificialIntelligence/6-ArtificialIntelligence.md"
   ]
 }
