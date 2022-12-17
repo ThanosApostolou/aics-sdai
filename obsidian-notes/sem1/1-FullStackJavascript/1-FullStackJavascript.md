@@ -1,9 +1,5 @@
-### Lessons
-1. 1
-2. 2
-3. 3
-4. 4
-5. 5
-6. [[lesson6-20221213]]
+## LESSONS
+> [!lesson6-20221213]-
+> ![[lesson6-20221213]]
 
-dfasdf
+## GENERAL - NOTES

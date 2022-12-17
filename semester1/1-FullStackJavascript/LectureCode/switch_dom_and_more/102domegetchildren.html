@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- This is a comment node! -->
+<p>Click the button get info about the body element's child nodes.</p>
+<button onclick="myFunction()"><p> hiiiiiiiiiiiii</p>
+</button> 
+<button onclick="myFunction()"><!-- This is a comment node! -->
+	<a>lalalal</a>
+  <!--<p>.hiiiiiiiiiiiii</p> -->
+</button>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+ var c= document.getElementsByTagName("button");	
+ c = c[1].childNodes;
+
+  var txt = "";
+  var i;
+  for (i = 0; i < c.length; i++) {
+    txt = txt + c[i].nodeName + "<br>";
+  }
+
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+    <p>Get the sum of the numbers in the array.</p>
+
+    <p id="demo"></p>
+
+    <script>
+    var sum = 0;
+    var sum1 = 0;
+
+    var numbers = [65, 44, 12, 4];
+    // forEach() method does not create a new array based on the given array.
+    const array1= numbers.forEach(item => sum+=item);
+    // forEach() method returns “undefined“.
+    console.log(array1);
+
+    //map() method creates an entirely new array
+    const array2=numbers.map(item => sum1=sum1+item);
+    //map() method returns the newly created array 
+    console.log(array2);
+
+    console.log(numbers);
+
+
+    </script>
+
+    </body>
+</html>

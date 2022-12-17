@@ -1,0 +1,17 @@
+<html ng-app="myApp" ng-controller='UserController'>
+<head>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js'></script>
+ <script>
+var app = angular.module('myApp', []);
+app.controller('UserController', function($scope) {
+    $scope.user = { name:'Larry' };
+    //$scope.lastName = "Doe";
+});
+</script>
+</head>
+<body >
+  <div>Hi {{user.name}}</div>
+
+</body>
+</html>
+

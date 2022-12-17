@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+var test = 'JavaScript';
+test = test + 'Something';
+
+//Behind the scene, the JavaScript engine creates a new string 
+//that holds the new string 'JavaScriptSomething' and destroys the
+// original strings.
+console.log(test[0]);
+
+
+test[0] = 'X';
+console.log(test)
+console.log(test[0]);
+
+
+
+</script>
+
+</body>
+</html>
+

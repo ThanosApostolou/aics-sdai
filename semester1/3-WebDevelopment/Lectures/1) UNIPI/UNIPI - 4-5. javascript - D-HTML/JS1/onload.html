@@ -1,0 +1,31 @@
+<HTML>
+
+<!-- Demonstrating the ONLOAD event -->
+
+<HEAD>
+<TITLE>DHTML Event Model - ONLOAD</TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+
+var seconds = 0;
+
+function startTimer() {
+   // 1000 milliseconds = 1 second
+   window.setInterval( "updateTime()", 1000 );
+}
+
+function updateTime() {
+   seconds++;
+	var obj = document.getElementById('soFar'); 
+	obj.innerText = seconds;   
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY ONLOAD = "startTimer()">
+
+<P>Seconds you have spent viewing this page so far:
+<A ID = "soFar" STYLE = "font-weight: bold">0</A></P>
+
+</BODY>
+</HTML>

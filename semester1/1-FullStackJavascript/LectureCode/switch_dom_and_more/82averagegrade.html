@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays: average grade</h2>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+
+
+<script>
+var grades=[10,5, ,7,8,3];
+var sumGrades=0;
+for(var i=0; i<grades.length; i++){
+	if(!isNaN(grades[i]))
+		sumGrades += grades[i];	
+	}
+		avgScore = sumGrades/grades.length;
+document.getElementById("demo").innerHTML = avgScore;
+
+var array1 = [2, 4, , 6, 12, 20];
+var total=0
+// undefined element is skipped
+for(var element in array1){
+    total+=array1[element];// total=total+array1[element];// total=2 , total=2+4=6
+    console.log(element,total);
+}
+
+document.getElementById("demo1").innerHTML = total/array1.length;
+
+var array2 = [1, 2, 3, , 3];
+
+var total2=0
+for(var element of array2){
+    total2+=element;
+    console.log(element,total2);
+}
+document.getElementById("demo2").innerHTML = total2/array2.length;
+
+
+
+</script>
+
+</body>
+</html>
+

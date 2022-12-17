@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="exp"></p>
+
+<script>
+
+
+//push
+var fruits = ["Apple", "Orange"];
+
+fruits.push("Banana");
+
+alert( fruits ); // Apple, Orange, Banana
+
+//shift
+
+alert( fruits.shift() ); // remove Apple and alert it
+alert( fruits ); // Orange, Banana
+
+//unshift
+
+fruits.unshift('Apple');
+fruits.unshift('pear');
+
+alert( fruits ); // pear, Apple, Orange, Banana
+
+
+	
+//pop
+var fruits = ["Apple", "Orange","Banana"];
+
+alert( fruits.pop() ); // remove "Banana" and alert it
+
+alert( fruits ); // Apple, Orange
+
+//push
+
+fruits.push("Banana");
+
+alert( fruits ); // Apple, Orange, Banana
+</script>
+
+</body>
+</html>
+
+

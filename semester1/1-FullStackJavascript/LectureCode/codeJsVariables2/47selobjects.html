@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="exp"></p>
+
+<script>
+
+//------------OBJECTS--------------------
+const cat = {
+  name: "Javie",
+  age: 5,
+  color: "white",
+  eyeColor: "blue"
+};
+
+console.log(cat["name"]);
+console.log(cat.age);
+console.log(typeof(cat));
+
+var name="Aristea";
+var surname = " Kontogianni";
+var person = { name, surname };
+console.log(person);
+console.log(person.name+" "+person["surname"]);
+
+delete cat.name;
+console.log(cat);
+console.log("name" in cat);
+console.log("age" in cat);
+
+
+console.log(cat.name);
+
+
+
+
+</script>
+
+</body>
+</html>
+
+

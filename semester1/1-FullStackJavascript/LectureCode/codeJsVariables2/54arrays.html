@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="exp"></p>
+
+<script>
+
+//--------------ARRAYS---------
+
+var cats = ["Ragdoll", "Bengal", "Ocicat","Toyger"];
+//document.getElementById("demo").innerHTML = cats;
+
+var x = cats.length;
+//console.log("length: " + x +" one cat: " + cats[1]);
+
+var cats1 = ["Ragdoll", , , ,"Toyger"];
+console.log("length1: " + cats1.length +" one cat1: " + cats1[0]);
+
+cats1[1]="Bengal";
+document.body.innerHTML =cats1;
+
+console.log(typeof(cats1));
+</script>
+
+</body>
+</html>
+
+
