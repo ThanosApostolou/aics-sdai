@@ -1,0 +1,38 @@
+<html>
+<body>
+
+<h2>The JavaScript <i>this</i> Keyword</h2>
+
+<p id="cat1"></p>
+<p id="cat2"></p>
+
+
+<script>
+
+var cat={
+    det:function(){
+        return this.name+" "+this.age;
+    }
+}
+
+var cat1={
+    name: "Javie",
+    age:5
+}
+var cat2={
+    name: "stilvi",
+    age:1
+}
+
+//here we call the det method of cat, using it on cat1
+var x=cat.det.call(cat1);
+var y=cat.det.call(cat2);
+
+
+document.getElementById("cat1").innerHTML = x;
+document.getElementById("cat2").innerHTML = y;
+
+</script>
+
+</body>
+</html>

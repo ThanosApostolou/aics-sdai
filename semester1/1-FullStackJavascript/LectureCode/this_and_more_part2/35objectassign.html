@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="exp"></p>
+
+<script>
+
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+//console.log(target);
+// expected output: Object { a: 1, b: 4, c: 5 }
+
+//console.log(returnedTarget === target);
+// expected output: true
+
+target.a=5
+//console.log(returnedTarget);
+//console.log(returnedTarget === target);
+// expected output: true
+
+
+
+
+const o1 = { a: 1, b: 1, c: 1 };
+const o2 = { b: 4, c: 5 };
+const o3 = { c: 3 };
+
+//Object.assign(target, source)
+//obj here is the same as o1
+const obj = Object.assign(o1, o2, o3);
+console.log(obj);
+console.log(o1); 
+console.log(o2); 
+console.log(o3); 
+
+//here i have {} so no target
+const obj2 = Object.assign({}, o1);
+console.log("objectt2: ");
+console.log(obj2);
+obj2.a=9;
+console.log("objectt2 once modified: ");
+console.log(obj2);
+
+console.log(o1); 
+
+
+
+
+</script>
+
+</body>
+</html>
+
+

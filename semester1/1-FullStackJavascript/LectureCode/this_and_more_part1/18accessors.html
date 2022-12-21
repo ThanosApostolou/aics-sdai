@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>
+		JavaScript Getter
+	</title>
+</head>
+
+<body>
+
+
+        <p> Here is p with id name:</p>
+		<p id="name"></p>
+
+		<p>Here is p with id test:</p>
+		<p id="test"></p>
+
+
+
+	<script>
+		
+		// Create an object:
+		var person = {
+			name: "aristea",
+			//return an uppercase version of the name
+			// while reserving the actual case for internal use.
+			//Getter must not have any parameters
+			get prop() {
+				return this.name.toUpperCase();
+			},
+			test: function(){
+				return this.name.toUpperCase();
+			}
+		};
+		
+		// Display data from the object using a getter
+		//name to prop as a property not function
+		//simpler syntax
+		document.getElementById("name").innerHTML
+				= person.prop;
+		//attempting to assign a value to prop will not change it.
+		person.prop="Mpla"
+		document.getElementById("name").innerHTML
+				= person.prop;
+	
+		person.test="Mpla mpla"
+		//document.getElementById("test").innerHTML	= person.test();
+		document.getElementById("test").innerHTML
+				= person.test;
+		console.log(person.test);
+			
+
+	</script>
+</body>
+
+</html>					

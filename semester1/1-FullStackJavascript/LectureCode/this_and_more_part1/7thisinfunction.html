@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>Demo: this keyword </h1>
+	<script>
+
+	var myVar = 10;
+
+	alert("this.myVar = " + this.myVar);
+
+	function WhoIsThis() {
+		var myVar = 20;
+
+		alert("myVar = " + myVar); 
+		alert("this.myVar = " + this.myVar); 
+	};
+
+	WhoIsThis(); 
+
+	</script>	
+</body>
+</html>

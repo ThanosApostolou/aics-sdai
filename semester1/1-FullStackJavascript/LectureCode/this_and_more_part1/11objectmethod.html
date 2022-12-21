@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+	
+	<script>
+var name="test";
+
+var dog =	{ 
+     name:"Bob",
+     eyes:"Blue",
+     woof:function(){ return "Woof, woof!";},
+     sayone:function myfun() {return "I am a dog"},
+     saytwo() {
+          // shorter syntax for defining a function property
+          return "And I bark";
+     },
+     saythree:anothertest,
+     anothertest2
+};
+
+function anothertest(){
+    console.log("hi friends");
+}
+function anothertest2(){
+    console.log("hi friends2");
+}
+
+console.log(dog.sayone());
+console.log(dog.saytwo());
+dog.saythree();
+dog.anothertest2();
+
+dog.new=function (){
+    return "Yeap i AM a new method"
+}
+console.log(dog);
+
+
+
+
+	</script>	
+</body>
+</html>

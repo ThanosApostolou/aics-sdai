@@ -1,0 +1,38 @@
+<html>
+<body>
+
+<h4>Prototypal Inheritance</h4>
+
+<script>
+//constructor : when we want a "blueprint" for creating many objects of the same "type".
+//The way to create an "object type", is to use an object constructor function.
+//Note: It is considered a good practice to capitalize the first letter of your constructor function.
+function MyCat(x, y,z) {
+
+  this.name = x;
+  this.age  = y;
+  this.eyesColor  = z;
+  this.des = function(){ return this.name + " " + this.age};
+
+}
+
+
+//
+console.log(MyCat.prototype);
+
+const cat={
+  name:'Javie',
+  color:'white'
+}
+
+console.log(cat);
+console.log(Object.getPrototypeOf(cat))
+
+
+let num=["rosa","javie","stilvi"];
+console.log(num);
+
+</script>
+
+</body>
+</html>

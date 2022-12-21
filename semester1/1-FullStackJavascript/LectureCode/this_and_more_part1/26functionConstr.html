@@ -1,0 +1,66 @@
+<html>
+<body>
+
+<h2>The JavaScript <i>this</i> Keyword</h2>
+
+<p id="cat1"></p>
+<p id="cat2"></p>
+
+
+<script>
+/*constructor : when we want a "blueprint" for
+ creating many objects of the same "type".
+
+The way to create an "object type", is to use
+ an object constructor function.
+
+Note: It is considered a good practice to
+ capitalize the first letter of your constructor function.
+*/
+function MyCat(x, y,z) {
+
+  this.name = x;
+  this.age  = y;
+  this.eyesColor  = z;
+  this.des = function(){ return this.name + " " + this.age};
+
+}
+
+/*
+In JavaScript, when this
+keyword is used in a constructor function, 
+this refers to the object when the object is created
+*/
+
+var x = new MyCat("Javie", "7","blue");
+console.log("typeof x : "+typeof(x));
+console.log(this);
+/*In other words, this.name means the 
+name property of this object.
+Hence, when an object accesses the properties, 
+it can directly access the property as*/
+
+document.getElementById("cat1").innerHTML = x.name;
+
+var y = new MyCat("Rosa", "11","gold");
+
+document.getElementById("cat2").innerHTML = y.des();
+
+
+//add a property to a existing object
+x.food="everything";
+
+x.prefers = function(){
+  return "My cat likes: "+ this.food;
+};
+
+console.log(x.food+ "   -  " + x.prefers());
+console.log(x);
+console.log(MyCat);
+
+
+
+</script>
+
+</body>
+</html>

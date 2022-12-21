@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+var inn;
+const person = {
+    name: 'jane',
+    surname: 'ostin',
+    test:this,
+    show: function () {
+        console.log("show is running: "+this.name)
+    },
+    getone: function getMore(){
+        console.log("Get one is running "+this.name);
+        //Below you see a regular function NOT a Method!!!
+        function inner() {
+            console.log('Inner is running within getone(): '+this +" "+ this.name);
+        }
+        // we take the person object and use it as the value of this
+        inner.bind(person)();
+        
+        function inner2() {
+            console.log('Inner2 : '+this +" "+ this.name);
+        }
+        inn=inner2;
+       
+    },
+   gettwo: function getarrowMore(){
+      
+    
+        const inner = () => {
+            console.log('Inner arrow is running: '+this +" "+ this.name);
+        }
+        inner();
+    }
+    
+    
+};
+
+// Inner is running: [object Window]
+person.getone()
+//an arrow function binds the parrent context to itself
+person.gettwo();
+//we execute everything in inner2 but 'this'
+//is pointing to person object
+//inn.call(person);
+inn.bind(person)();
+
+
+//with bind we cannot change this in arrow functions!
+var test = () => console.log(this);
+var o = {'a': 42};
+var fBound = test.bind(o);
+fBound();
+
+</script>
+</body>
+</html>

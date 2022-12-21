@@ -1,0 +1,65 @@
+<html>
+<body>
+
+<h2>The JavaScript <i>this</i> Keyword</h2>
+
+<p id="cat1"></p>
+<p id="cat2"></p>
+
+
+<script>
+//constructor : when we want a "blueprint" for creating many objects of the same "type".
+//The way to create an "object type", is to use an object constructor function.
+//Note: It is considered a good practice to capitalize the first letter of your constructor function.
+function MyCat(x, y,z) {
+
+  this.name = x;
+  this.age  = y;
+  this.eyesColor  = z;
+  this.des = function(){ return this.name + " " + this.age};
+
+}
+
+// This creates a new object
+//In JavaScript, when this keyword is used in a constructor function, 
+//this refers to the object when the object is created. For example,
+
+var x = new MyCat("Javie", "4","blue");
+
+
+//In other words, this.name means the name property of this object.
+//Hence, when an object accesses the properties, it can directly access the property as
+document.getElementById("cat1").innerHTML = x.name;
+
+var y = new MyCat("Rosa", "9","gold");
+document.getElementById("cat2").innerHTML = y.des();
+
+//The this keyword in the constructor does not have a value.
+//The value of this will be the new object created when the function is invoked.
+
+//add a property to a existing object
+MyCat.prototype.food="everything";
+
+MyCat.prototype.prefers = function(){
+  return "My cat likes: "+this.food;
+};
+
+console.log(x.food+ "   -  " + x.prefers()+ "   "+ x.des());
+console.log(y.food+ "   -  " + y.prefers()+ "   "+ y.des());
+
+// changing the property value of prototype
+MyCat.prototype.food= 'chicken';
+
+// creating new object
+const stilvi = new MyCat('Stilvi', '1','gold');
+console.log(stilvi);
+
+console.log(stilvi.prefers()); // 50
+
+console.log(x.food+ "   -  " + x.prefers()+ "   "+ x.des());
+
+
+</script>
+
+</body>
+</html>

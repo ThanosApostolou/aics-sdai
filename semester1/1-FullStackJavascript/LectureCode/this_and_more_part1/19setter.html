@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const person = {
+  name: "Aristea",
+  age: "",
+  set myage(newage) {
+    this.age = newage;
+  }
+};
+
+// Set a property using set:
+person.myage = 25;
+//person.myage(35);
+
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.age;
+</script>
+
+</body>
+</html>

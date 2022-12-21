@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>Demo: this keyword </h1>
+	<script>
+
+	var myVar = 10;
+
+    //When a function is called without an owner object ->value of this becomes the global object ->in a web browser the global object is the browser window. (The window object represents an open window in a browser.)
+	alert("this.myVar = " + this.myVar); //10
+
+	function WhoIsThis() {
+		var myVar = 20;
+        function WhoIsThis2(){
+			console.log(this);
+			alert("this local = " + myVar); //20
+		alert("this.myVar2 = " + this.myVar); //10
+        }
+        return WhoIsThis2();
+    };
+
+	WhoIsThis();  
+
+	</script>	
+</body>
+</html>

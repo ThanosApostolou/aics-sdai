@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<h2>The JavaScript <i>this</i> Keyword</h2>
+
+<p id="demo"></p>
+
+<script>
+
+// Create an object:
+
+var cat = {
+  name: "Javie",
+  age : "4",
+  eyesColor : "blue",
+  des : function() {
+    return this.name + " " + this.age;
+  }
+};
+
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = cat.des();
+</script>
+
+</body>
+</html>

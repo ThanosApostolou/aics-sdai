@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Function bind()</h1>
+<p id="demo"></p>
+
+<script>
+
+const member = {
+  firstName:"Aristea",
+  lastName: "Kontogiannh",
+}
+
+
+function sayHi(){
+  console.log(this);
+  return "Hi I am "+this.firstName;
+}
+
+console.log(sayHi());
+
+let hi=sayHi.bind(member);
+
+console.log(hi());
+//or
+console.log(sayHi.bind(member)());
+
+
+</script>
+
+</body>
+</html>

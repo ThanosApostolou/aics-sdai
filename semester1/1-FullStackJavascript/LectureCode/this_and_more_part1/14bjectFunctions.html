@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+	
+	<script>
+var name="test";
+
+var dog =	{ 
+     name:"Bob",
+     sometest:this.name,
+     sometest1:this.kati,
+     woof:function() {  return "Woof, woof!";},
+     sayName:function myfun() {return this.name;},
+     saysometest() {
+          // Method which will display sometest
+          return this.sometest;
+     }
+};
+
+console.log(dog.woof());
+console.log(dog.sayName());
+console.log(dog.saysometest());
+console.log(dog.sometest1);
+
+
+
+
+	</script>	
+</body>
+</html>
