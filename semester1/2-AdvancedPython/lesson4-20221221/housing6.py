@@ -101,7 +101,7 @@ def plot_histogram(series, title_str):
     filename = series.name + ".png"
     figure_url = os.path.join(FIGURES_PATH, filename)
     plt.savefig(figure_url, dpi=100, format='png', bbox_inches='tight')
-    plt.show()
+    # plt.show()
 
 
 def main():
@@ -133,7 +133,7 @@ def main():
 
     # Create a histogram plot for each numerical attribute of the dataframe.
     housing.hist(bins=50, figsize=(20, 15))
-    plt.show()
+    # plt.show()
 
     # Generate and save histogram plots for each attribute in the dataframe.
     generate_numeric_histograms(housing)
@@ -195,7 +195,7 @@ def main():
     # Save figure.
     figure_url = os.path.join(FIGURES_PATH, "HousingHeatMap.png")
     plt.savefig(figure_url, dpi=100, format='png', bbox_inches='tight')
-    plt.show()
+    # plt.show()
 
     # Compute the correlation matrix between every pair of attributes.
     corr_matrix = housing.corr()
@@ -212,7 +212,7 @@ def main():
     # Save figure.
     figure_url = os.path.join(FIGURES_PATH, "AttributesCorrelation.png")
     plt.savefig(figure_url, dpi=100, format='png', bbox_inches='tight')
-    plt.show()
+    # plt.show()
 
     # The most promising house attribute turns out to be the median income.
     # Visualize the scatter plot between median house value and median income.
@@ -221,7 +221,7 @@ def main():
     # Save figure.
     figure_url = os.path.join(FIGURES_PATH, "IncomePriceCorrelation.png")
     plt.savefig(figure_url, dpi=100, format='png', bbox_inches='tight')
-    plt.show()
+    # plt.show()
 
     # Consider the following combinations of the original housing attributes.
     housing["rooms_per_household"] = housing["total_rooms"] / housing["households"]
@@ -423,6 +423,8 @@ def main():
     metrics = history.history.keys()
     print(metrics)
 
+    plt.clf()
+    plt.close()
     # Visualize training history for MSE.
     plt.plot(history.history['mse'])
     plt.plot(history.history['val_mse'])
