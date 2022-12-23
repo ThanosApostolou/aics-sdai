@@ -1,0 +1,25 @@
+{"countries":[
+  { "id":0,
+    "country":"Greece",
+    "capital_city":"Athens",
+    "info":"Athens is the capital and largest city of Greece. Athens dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years[5] and its earliest human presence starting somewhere between the 11th and 7th millennium BC.[6]"
+   },
+  {
+    "id":1,
+    "country":"Cyprus", 
+    "capital_city":"Nicosia",
+    "info":"Nicosia is the largest city, capital, and seat of government of Cyprus. It is located near the centre of the Mesaoria plain, on the banks of the River Pedieos."
+ },
+  { 
+    "id":2,
+    "country":"Italy",
+    "capital_city":"Rome",
+    "info":"Rome (Italian and Latin: Roma is the capital city and a special comune of Italy (named Comune di Roma Capitale), as well as the capital of the Lazio region. The city has been a major human settlement for almost three millennia. With 2,860,009 residents in 1,285 km2 (496.1 sq mi),[1] it is also the country's most populated comune. It is the third most populous city in the European Union by population within city limits. It is the centre of the Metropolitan City of Rome, which has a population of 4,355,725 residents, thus making it the most populous metropolitan city in Italy"
+ },
+  {  
+    "id":3,
+    "country":"Spain", 
+    "capital_city":"Madrid",
+    "info":"Madrid is the capital and most-populous city of Spain. The city has almost 3.4 million[8] inhabitants and a metropolitan area population of approximately 6.7 million. It is the second-largest city in the European Union (EU), surpassed only by Berlin in its administrative limits, and its monocentric metropolitan area is the second-largest in the EU, surpassed only by Paris.[9][10][11] The municipality covers 604.3 km2 (233.3 sq mi) geographical area.[12]"
+ }
+]}
