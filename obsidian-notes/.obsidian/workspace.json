@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem1/5-SoftwareEngineering/5-SoftwareEngineering.md",
+                "file": "sem1/4-PatternRecognitionMachineLearning/Lesson3-20221124.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -39,7 +39,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem1/1-FullStackJavascript/Lesson7-20221220.md",
+                "file": "sem1/4-PatternRecognitionMachineLearning/Lesson4-20221208.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a261196448df3261",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem1/4-PatternRecognitionMachineLearning/Lesson5-20230112.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -113,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "sem1/1-FullStackJavascript/Lesson7-20221220.md"
+                "file": "sem1/4-PatternRecognitionMachineLearning/Lesson5-20230112.md"
               }
             }
           }
@@ -129,7 +142,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "sem1/1-FullStackJavascript/Lesson7-20221220.md",
+                "file": "sem1/4-PatternRecognitionMachineLearning/Lesson5-20230112.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,7 +177,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sem1/1-FullStackJavascript/Lesson7-20221220.md",
+                "file": "sem1/4-PatternRecognitionMachineLearning/Lesson5-20230112.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -181,7 +194,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sem1/1-FullStackJavascript/Lesson7-20221220.md",
+                "file": "sem1/4-PatternRecognitionMachineLearning/Lesson5-20230112.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -215,17 +228,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e21c780cb2b6931e",
+  "active": "a261196448df3261",
   "lastOpenFiles": [
+    "sem1/4-PatternRecognitionMachineLearning/Lesson4-20221208.md",
+    "sem1/4-PatternRecognitionMachineLearning/Lesson3-20221124.md",
+    "sem1/4-PatternRecognitionMachineLearning/Lesson2-20221110.md",
+    "sem1/4-PatternRecognitionMachineLearning/Lesson1-20221103.md",
+    "sem1/4-PatternRecognitionMachineLearning/Lesson5-20230112.md",
     "sem1/5-SoftwareEngineering/5-SoftwareEngineering.md",
     "sem1/1-FullStackJavascript/Lesson7-20221220.md",
     "sem1/5-SoftwareEngineering/Lesson3-20221222.md",
     "sem1/2-AdvancedPython/Lesson4-20221221.md",
-    "sem1/1-FullStackJavascript/1-FullStackJavascript.md",
-    "sem1/1-FullStackJavascript/Lesson6-20221213.md",
-    "sem1/3-WebDevelopment/Lesson1-20221123.md",
-    "sem1/3-WebDevelopment/3-WebDevelopment.md",
-    "sem1/3-WebDevelopment/Lesson2-20221130.md",
-    "sem1/3-WebDevelopment/Lesson3-20221207.md"
+    "sem1/1-FullStackJavascript/1-FullStackJavascript.md"
   ]
 }
