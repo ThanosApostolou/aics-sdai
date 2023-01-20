@@ -174,3 +174,4 @@ venv.bak/
 dmypy.json
 .pyre/
 
+.~lock.*.docx#
