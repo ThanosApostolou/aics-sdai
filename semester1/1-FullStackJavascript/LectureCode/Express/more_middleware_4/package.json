@@ -1,0 +1,16 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "My first crud Ops",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Aristea Kontogianni",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
