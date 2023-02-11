@@ -1,8 +1,9 @@
 const { createServer } = require('./server/create-server');
 const dotenv = require('dotenv');
 const { initializeApp, App } = require('./infrastructure/app/app');
+const { DbUtils } = require('./infrastructure/db/db-utils');
 
-function main() {
+async function main() {
     dotenv.config({
         path: `${__dirname}/.env`
     })
@@ -11,6 +12,8 @@ function main() {
 
     console.log('instance', App.instance());
     // mongodb+srv://<username>:<password>@cluster0.sj8dgrp.mongodb.net/?retryWrites=true&w=majority
+
+    const connection = await DbUtils.connect();
 
     const app = createServer();
 
