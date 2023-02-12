@@ -3,7 +3,7 @@ const { UserValidator } = require('../../../../domain/user/user-validator');
 const { UserDto } = require('./dtos/user-dto');
 
 /**
- * @returns {Promise<[string]>}
+ * @returns {Promise<object>}
  */
 exports.doGetAllUsers = async function () {
     const users = await User.find();
@@ -16,8 +16,93 @@ exports.doGetAllUsers = async function () {
 }
 
 /**
+ * @param {string} id
+ * @returns {Promise<object>}
+ */
+exports.doGetUserById = async function (id) {
+    if (!id) {
+        return {
+            status: "error",
+            errors: `id was empty`
+        };
+    }
+    if (id && typeof id !== 'string') {
+        return {
+            status: "error",
+            errors: `id should be string`
+        };
+    }
+    let user;
+    try {
+        user = await User.findById(id);
+
+    } catch (e) {
+        return {
+            status: "error",
+            errors: `could not find user with id ${id}`
+        };
+    }
+    if (!user) {
+        return {
+            status: "error",
+            errors: `could not find user with id ${id}`
+        };
+    }
+    const usersDto = UserDto.fromUser(user);
+    return {
+        status: "success",
+        data: usersDto
+    }
+}
+
+/**
+ * @returns {Promise<object>}
+ */
+exports.doGetUserNameByEmail = async function (email) {
+    if (!email) {
+        return {
+            status: "error",
+            errors: `email was empty`
+        };
+    }
+    if (email && typeof email !== 'string') {
+        return {
+            status: "error",
+            errors: `email should be string`
+        };
+    }
+
+    let user;
+    try {
+        user = await User.findOne({
+            email: email
+        }, {
+            name: 1
+        });
+
+    } catch (e) {
+        return {
+            status: "error",
+            errors: `could not find user with email ${email}`
+        };
+    }
+    if (!user) {
+        return {
+            status: "error",
+            errors: `could not find user with email ${email}`
+        };
+    }
+
+    console.log('user', user)
+    return {
+        status: "success",
+        name: user.name
+    }
+}
+
+/**
  * @param {UserDto} userDto
- * @returns {Promise<[string]>}
+ * @returns {Promise<object>}
  */
 exports.doCreateUser = async function (userDto) {
     const errors = [];
@@ -56,7 +141,7 @@ exports.doCreateUser = async function (userDto) {
 /**
  * @param {string} id
  * @param {UserDto} userDto
- * @returns {Promise<[string]>}
+ * @returns {Promise<object>}
  */
 exports.doUpdateUserById = async function (id, userDto) {
     const errors = [];
@@ -126,7 +211,7 @@ exports.doUpdateUserById = async function (id, userDto) {
 /**
  * @param {string} email
  * @param {UserDto} userDto
- * @returns {Promise<[string]>}
+ * @returns {Promise<object>}
  */
 exports.doUpdateUserByEmail = async function (email, userDto) {
     const errors = [];
@@ -191,6 +276,52 @@ exports.doUpdateUserByEmail = async function (email, userDto) {
         };
 
     }
+
+}
+
+
+/**
+ * @param {string} id
+ * @returns {Promise<object>}
+ */
+exports.doDeleteUser = async function (id) {
+    const errors = [];
+
+    if (id == null) {
+        return {
+            status: "error",
+            errors: "email was null"
+        };
+    }
+    if (typeof id !== 'string') {
+        return {
+            status: "error",
+            errors: "email was not string"
+        };
+    }
+
+    let user;
+    try {
+        user = await User.findById(id);
+        if (!user) {
+            return {
+                status: "error",
+                errors: `could not find user with id ${id}`
+            };
+        }
+    } catch (e) {
+        return {
+            status: "error",
+            errors: `could not find user with id ${id}`
+        };
+
+    }
+
+    await user.delete();
+
+    return {
+        status: "success",
+    };
 
 
 }

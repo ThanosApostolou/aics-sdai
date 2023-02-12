@@ -1,5 +1,5 @@
 const express = require('express');
-const { handleGetAllUsers, handleCreateUser, handleUpdateUserById } = require('./users-controller');
+const { handleGetAllUsers, handleCreateUser, handleUpdateUserById, handleUpdateUserByEmail, handleGetUserById, handleGetUserNameByEmail, handleDeleteUser } = require('./users-controller');
 
 /***
  * @param {express.Router} parentRouter
@@ -8,9 +8,12 @@ const { handleGetAllUsers, handleCreateUser, handleUpdateUserById } = require('.
 exports.createUsersRouter = function (parentRouter) {
     const usersRouter = express.Router()
         .get('/get-all-users', handleGetAllUsers)
+        .get('/get-user-by-id', handleGetUserById)
+        .get('/get-user-name-by-email', handleGetUserNameByEmail)
         .post('/create-user', handleCreateUser)
         .put('/update-user-by-id', handleUpdateUserById)
-        .post('/create-user', handleCreateUser)
+        .put('/update-user-by-email', handleUpdateUserByEmail)
+        .delete('/delete-user', handleDeleteUser)
 
     parentRouter.use('/users', usersRouter)
 

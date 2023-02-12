@@ -9,9 +9,9 @@ const { UserDto } = require('./api/v1/users/dtos/user-dto');
 exports.userAgeMiddleware = function (req, res, next) {
     const usersPrefix = '/api/v1/users';
     const validPaths = [
-        `${usersPrefix}/create`,
-        `${usersPrefix}/update-by-id`,
-        `${usersPrefix}/update-by-email`
+        `${usersPrefix}/create-user`,
+        `${usersPrefix}/update-user-by-id`,
+        `${usersPrefix}/update-user-name-by-email`
     ]
 
     // if path is in the valid paths of this middleware
