@@ -11,7 +11,7 @@ exports.userAgeMiddleware = function (req, res, next) {
     const validPaths = [
         `${usersPrefix}/create-user`,
         `${usersPrefix}/update-user-by-id`,
-        `${usersPrefix}/update-user-name-by-email`
+        `${usersPrefix}/update-user-by-email`
     ]
 
     // if path is in the valid paths of this middleware

@@ -175,3 +175,4 @@ dmypy.json
 .pyre/
 
 .~lock.*.docx#
+.~lock.*.odt#

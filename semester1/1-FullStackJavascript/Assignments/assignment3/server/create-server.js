@@ -10,7 +10,7 @@ exports.createServer = function () {
     //---------------------MIDDLEWARES----------------
     expressInstance.use(express.json());
     //serve static files
-    expressInstance.use(express.static(`${__dirname}/public`));
+    expressInstance.use(express.static(`${__dirname}/../public`));
     //3rd party middleware morgan :HTTP request logger middleware for node.js
     expressInstance.use(morgan('dev'));
     //my middleware
