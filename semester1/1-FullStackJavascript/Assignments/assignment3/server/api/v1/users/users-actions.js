@@ -93,7 +93,6 @@ exports.doGetUserNameByEmail = async function (email) {
         };
     }
 
-    console.log('user', user)
     return {
         status: "success",
         name: user.name
@@ -182,7 +181,6 @@ exports.doUpdateUserById = async function (id, userDto) {
             };
         }
 
-        console.log('user.id', user.id)
         const br1Error = await UserValidator.validateBr1UniqueEmail(user);
         if (br1Error) {
             return {

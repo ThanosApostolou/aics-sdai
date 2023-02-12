@@ -2,7 +2,7 @@ const { EnvConfig } = require('../core/env-config');
 
 class App {
     /**
-     * @type {App | null}
+     * @type {App}
      */
     static _instance = null;
 

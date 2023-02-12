@@ -10,7 +10,6 @@ async function main() {
 
     initializeApp();
 
-    console.log('instance', App.instance());
     // mongodb+srv://<username>:<password>@cluster0.sj8dgrp.mongodb.net/?retryWrites=true&w=majority
 
     const connection = await DbUtils.connect();
@@ -19,7 +18,7 @@ async function main() {
 
     //START SERVER
     app.listen(8080, () => {
-        console.log('Yeah I run');
+        console.info('Server started');
     });
 }
 
