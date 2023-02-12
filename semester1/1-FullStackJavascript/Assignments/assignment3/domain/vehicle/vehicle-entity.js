@@ -1,6 +1,6 @@
 const { default: mongoose, Schema } = require('mongoose');
 
-exports.Vehicle = mongoose.model('Vehicle', new Schema({
+const Vehicle = mongoose.model('Vehicle', new Schema({
     brand: {
         type: String,
         required: true
@@ -30,3 +30,7 @@ exports.Vehicle = mongoose.model('Vehicle', new Schema({
         required: false
     },
 }));
+
+module.exports = {
+    Vehicle
+}
