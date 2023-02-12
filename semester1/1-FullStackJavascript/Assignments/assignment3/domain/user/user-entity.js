@@ -3,22 +3,28 @@ const { default: mongoose, Schema } = require('mongoose');
 exports.User = mongoose.model('User', new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true,
+        trim: true,
+        lowercase: true,
     },
     age: {
         type: Number,
-        required: true
+        required: true,
     },
     phone: {
         type: String,
-        required: false
+        required: false,
+        trim: true,
     },
     address: {
         type: String,
-        required: false
+        required: false,
+        trim: true,
     },
 }));

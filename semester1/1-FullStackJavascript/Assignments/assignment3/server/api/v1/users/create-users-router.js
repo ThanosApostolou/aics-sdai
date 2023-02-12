@@ -1,5 +1,5 @@
 const express = require('express');
-const { handleGetAllUsers } = require('./users-controller');
+const { handleGetAllUsers, handleCreateUser, handleUpdateUserById } = require('./users-controller');
 
 /***
  * @param {express.Router} parentRouter
@@ -7,7 +7,10 @@ const { handleGetAllUsers } = require('./users-controller');
  */
 exports.createUsersRouter = function (parentRouter) {
     const usersRouter = express.Router()
-        .get('/fetch-all', handleGetAllUsers)
+        .get('/get-all-users', handleGetAllUsers)
+        .post('/create-user', handleCreateUser)
+        .put('/update-user-by-id', handleUpdateUserById)
+        .post('/create-user', handleCreateUser)
 
     parentRouter.use('/users', usersRouter)
 

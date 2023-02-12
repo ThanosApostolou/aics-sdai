@@ -1,6 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
+
 const { createApiRouter } = require('./api/create-api-router');
+const { userAgeMiddleware } = require('./middlewares');
 
 exports.createServer = function () {
     const expressInstance = express();
@@ -12,10 +14,7 @@ exports.createServer = function () {
     //3rd party middleware morgan :HTTP request logger middleware for node.js
     expressInstance.use(morgan('dev'));
     //my middleware
-    expressInstance.use((req, res, next) => {
-        console.log("hi my friend, I am your middleware!")
-        next();
-    });
+    expressInstance.use(userAgeMiddleware);
 
     createApiRouter(expressInstance);
 
