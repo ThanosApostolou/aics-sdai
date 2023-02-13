@@ -1,0 +1,567 @@
+{
+	"info": {
+		"_postman_id": "4b6e7953-c1ca-48e9-92c3-953ead32e7c4",
+		"name": "assignment3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10982779"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "users",
+							"item": [
+								{
+									"name": "get-all-users",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/get-all-users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"get-all-users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get-user-by-id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/get-user-by-id?id=63e902f991bfa8d61c5c6063",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"get-user-by-id"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "63e902f991bfa8d61c5c6063"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get-user-by-id-invalid",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/get-user-by-id?id=asdfasdfas",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"get-user-by-id"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "asdfasdfas"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get-user-name-by-email",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/get-user-name-by-email?email=thanosapostolou@outlook.com",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"get-user-name-by-email"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "thanosapostolou@outlook.com"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get-user-name-by-email-invalid",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/get-user-name-by-email?email=afasdfa",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"get-user-name-by-email"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "afasdfa"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create-user1",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"thanos\",\n    \"email\": \"thanosapostolou@outlook.com\",\n    \"age\": 28,\n    \"phone\": 6981917506,\n    \"address\": \"Peristeri\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/create-user",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"create-user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create-user2",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"kostas\",\n    \"email\": \"kostaspapanikolaou@gmail.com\",\n    \"age\": 32,\n    \"phone\": 6982837456,\n    \"address\": \"Kalithea\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/create-user",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"create-user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create-user-invalid",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/create-user",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"create-user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create-user-invalid-age",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"thanos\",\n    \"email\": \"thanosapostolou1@outlook.com\",\n    \"age\": 12,\n    \"phone\": 6981917506,\n    \"address\": \"Peristeri\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/create-user",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"create-user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update-user-by-id1",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"thanos\",\n    \"email\": \"thanosapostolou@outlook.com\",\n    \"age\": 28,\n    \"phone\": \"6981917505\",\n    \"address\": \"Peristeri\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/update-user-by-id?id=63e902f991bfa8d61c5c6063",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"update-user-by-id"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "63e902f991bfa8d61c5c6063"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update-user-by-email1",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"thanos\",\n    \"email\": \"thanosapostolou@outlook.com\",\n    \"age\": 20,\n    \"phone\": \"6981917505\",\n    \"address\": \"Peristeri\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/update-user-by-email?email=thanosapostolou@outlook.com",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"update-user-by-email"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "thanosapostolou@outlook.com"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete-user",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/v1/users/delete-user?id=63ea744c708ccd517169118a",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"delete-user"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "63ea744c708ccd517169118a"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "vehicles",
+							"item": [
+								{
+									"name": "get-all-vehicles",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/v1/vehicles/get-all-vehicles",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"vehicles",
+												"get-all-vehicles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get-vehicle-by-id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/v1/vehicles/get-vehicle-by-id?id=63e9298468c8aa7787fb818b",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"vehicles",
+												"get-vehicle-by-id"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "63e9298468c8aa7787fb818b"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create-vehicle",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"brand\": \"ford\",\n    \"type\": \"sedan\",\n    \"model\": \"mondeo\",\n    \"year\": 2007,\n    \"engineCapacity\": \"1800cc\",\n    \"enginePower\": \"120hp\",\n    \"photo\": \"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\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/vehicles/create-vehicle",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"vehicles",
+												"create-vehicle"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create-vehicle-invalid",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/vehicles/create-vehicle",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"vehicles",
+												"create-vehicle"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update-vehicle-by-id",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"brand\": \"ford\",\n    \"type\": \"sedan\",\n    \"model\": \"mondeo\",\n    \"year\": 2001,\n    \"engineCapacity\": \"1800cc\",\n    \"enginePower\": \"125hp\",\n    \"photo\": \"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\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/v1/vehicles/update-vehicle-by-id?id=63e9298468c8aa7787fb818b",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"vehicles",
+												"update-vehicle-by-id"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "63e9298468c8aa7787fb818b"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete-vehicle",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/v1/vehicles/delete-vehicle?id=63ea7898e01494504b3fe0e7",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"v1",
+												"vehicles",
+												"delete-vehicle"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "63ea7898e01494504b3fe0e7"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

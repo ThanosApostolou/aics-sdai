@@ -23,12 +23,12 @@ exports.WebUtils = class {
      * @return {express.Response<any, Record<string, any>>}
      */
     static sendResponseByStatus(res, result) {
-        if (result?.status === 'success') {
-            return res.status(200)
-                .json(result);
-        } else {
+        if (result?.status === 'error') {
             console.error(result);
             return res.status(422)
+                .json(result);
+        } else {
+            return res.status(200)
                 .json(result);
         }
     }

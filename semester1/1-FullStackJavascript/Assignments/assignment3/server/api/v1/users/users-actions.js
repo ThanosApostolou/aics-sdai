@@ -94,7 +94,6 @@ exports.doGetUserNameByEmail = async function (email) {
     }
 
     return {
-        status: "success",
         name: user.name
     }
 }
