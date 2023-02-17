@@ -71,9 +71,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "cba4a4084193eca0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem1/2-AdvancedPython/Lesson4-20221221.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d7eaa93a22293f47",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem1/2-AdvancedPython/Lesson5-20230215.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -139,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "sem1/6-ArtificialIntelligence/Lesson4-20230203.md"
+                "file": "sem1/2-AdvancedPython/Lesson5-20230215.md"
               }
             }
           }
@@ -155,7 +181,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "sem1/6-ArtificialIntelligence/Lesson4-20230203.md",
+                "file": "sem1/2-AdvancedPython/Lesson5-20230215.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -190,7 +216,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sem1/6-ArtificialIntelligence/Lesson4-20230203.md",
+                "file": "sem1/2-AdvancedPython/Lesson5-20230215.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,7 +233,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sem1/6-ArtificialIntelligence/Lesson4-20230203.md",
+                "file": "sem1/2-AdvancedPython/Lesson5-20230215.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -241,17 +267,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cb20f3a6df028647",
+  "active": "d7eaa93a22293f47",
   "lastOpenFiles": [
+    "sem1/6-ArtificialIntelligence/Lesson4-20230203.md",
+    "sem1/2-AdvancedPython/Lesson5-20230215.md",
+    "sem1/2-AdvancedPython/Lesson4-20221221.md",
+    "sem1/6-ArtificialIntelligence/Lesson6-20230217.md",
     "sem1/6-ArtificialIntelligence/Lesson3-20230127.md",
     "sem1/3-WebDevelopment/Lesson5-20230201.md",
     "sem1/3-WebDevelopment/Lesson4-20230118.md",
     "sem1/1-FullStackJavascript/Lesson9-20230117.md",
     "sem1/1-FullStackJavascript/Lesson10-20230124.md",
-    "sem1/5-SoftwareEngineering/Lesson3-20221222.md",
-    "sem1/6-ArtificialIntelligence/6-ArtificialIntelligence.md",
-    "sem1/4-PatternRecognitionMachineLearning/Lesson6-20230119.md",
-    "sem1/4-PatternRecognitionMachineLearning/Lesson5-20230112.md",
-    "sem1/3-WebDevelopment/Lesson3-20221207.md"
+    "sem1/5-SoftwareEngineering/Lesson3-20221222.md"
   ]
 }
