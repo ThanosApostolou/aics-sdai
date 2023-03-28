@@ -13,14 +13,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem2/1)Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
+                "file": "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5fe5d749e7a64a59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6f86a5acc22fd5e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "779498472c4d4265",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -86,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "sem2/1)Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md"
+                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md"
               }
             }
           }
@@ -102,7 +142,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "sem2/1)Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
+                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -137,7 +177,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sem2/1)Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
+                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +194,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sem2/1)Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
+                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -189,14 +229,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1986f7aa70836c52",
+  "active": "65086b228cabbbfc",
   "lastOpenFiles": [
-    "sem2/1)Artificial-Intelligence-and-Microservices-in-Web/1)Artificial-Intelligence-and-Microservices-in-Web.md",
-    "sem2/1)Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
+    "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/1_Artificial-Intelligence-and-Microservices-in-Web.md",
+    "sem2/3_Advanced-Deep-Learning-with-Python/Lesson2-20230328.md",
+    "sem2/3_Advanced-Deep-Learning-with-Python/Lesson1-20230321.md",
+    "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
+    "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
+    "sem2/3_Advanced-Deep-Learning-with-Python",
     "sem1/3-WebDevelopment/3-WebDevelopment.md",
     "sem1/6-ArtificialIntelligence/6-ArtificialIntelligence.md",
     "sem1/6-ArtificialIntelligence/Lesson3-20230127.md",
-    "sem2/1)Artificial-Intelligence-and-Microservices-in-Web",
+    "sem2/1_Artificial-Intelligence-and-Microservices-in-Web",
     "sem2",
     "sem1/4-PatternRecognitionMachineLearning/Lesson6-20230119.md",
     "sem1/4-PatternRecognitionMachineLearning/4-PatternRecognitionMachineLearning.md",
