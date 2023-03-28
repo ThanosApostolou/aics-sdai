@@ -58,9 +58,48 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ed04bc84b6b464b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem2/4_Social-Networks-Analysis/4_Social-Networks-Analysis.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0f793fd00a2ae515",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem2/4_Social-Networks-Analysis/Lesson1-20230321.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5e880ac69f5a2ce6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -126,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md"
+                "file": "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md"
               }
             }
           }
@@ -142,7 +181,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
+                "file": "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -177,7 +216,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
+                "file": "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -194,7 +233,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
+                "file": "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -229,12 +268,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "65086b228cabbbfc",
+  "active": "5e880ac69f5a2ce6",
   "lastOpenFiles": [
+    "sem2/4_Social-Networks-Analysis/4_Social-Networks-Analysis.md",
+    "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
+    "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
+    "sem2/4_Social-Networks-Analysis/Lesson1-20230321.md",
+    "sem2/4_Social-Networks-Analysis/Untitled",
+    "sem2/4_Social-Networks-Analysis",
     "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/1_Artificial-Intelligence-and-Microservices-in-Web.md",
     "sem2/3_Advanced-Deep-Learning-with-Python/Lesson2-20230328.md",
     "sem2/3_Advanced-Deep-Learning-with-Python/Lesson1-20230321.md",
-    "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
     "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
     "sem2/3_Advanced-Deep-Learning-with-Python",
     "sem1/3-WebDevelopment/3-WebDevelopment.md",
