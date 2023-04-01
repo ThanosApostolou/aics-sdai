@@ -1,0 +1,58 @@
+[
+    {
+        "name": "The Avengers",
+        "director": "Joss Whedon",
+        "writers": "Joss Whedon(screenplay), Zak Penn(story)",
+        "actors": "Robert Downey Jr., Chris Evans, Scarlett Johansson",
+        "appropriateness": "PG-13",
+        "year": "2012",
+        "duration": 83,
+        "trailer": "https://www.youtube.com/watch?v=eOrNdBpGMv8",
+        "description": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity."
+    },
+    {
+        "name": "Ant-Man",
+        "director": "Peyton Reed",
+        "writers": "Edgar Wright,Joe Cornish, Adam McKay",
+        "actors": "Paul Rudd,Michael Douglas,Corey Stoll",
+        "appropriateness": "PG-13",
+        "year": "2015",
+        "duration": 97,
+        "trailer": "https://www.youtube.com/watch?v=pWdKf3MneyI",
+        "description": "Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero and help his mentor, Dr. Hank Pym, pull off a plan that will save the world."
+    },
+    {
+        "name": "Schindler's List",
+        "director": "Steven Spielberg",
+        "writers": "Thomas Keneally, Steven Zaillian",
+        "actors": "Liam Neeson, Ralph Fiennes, Ben Kingsley",
+        "appropriateness": "R",
+        "year": "1993",
+        "duration": 195,
+        "trailer": "https://www.youtube.com/watch?v=gG22XNhtnoY",
+        "description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis."
+    },
+    {
+        "name": "Creed III",
+        "director": "Michael B. Jordan",
+        "writers": "Keenan Coogler, Zach Baylin, Ryan Coogler",
+        "actors": "Michael B. Jordan, Tessa Thompson, Jonathan Majors",
+        "appropriateness": "PG-13",
+        "year": "2023",
+        "duration": 116,
+        "trailer": "https://www.youtube.com/watch?v=AHmCH7iB_IM",
+        "description": "Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight."
+    },
+    // DEMONSTRATION
+    {
+        "name": "Harry Potter and the Prisoner of Azkaban",
+        "director": "Alfonso Cuarón",
+        "writers": "J.K. Rowling, Steve Kloves",
+        "actors": "Daniel Radcliffe, Emma Watson, Rupert Grint",
+        "appropriateness": "PG",
+        "year": "2004",
+        "duration": 142,
+        "trailer": "https://www.youtube.com/watch?v=lAxgztbYDbs",
+        "description": "Harry Potter, Ron and Hermione return to Hogwarts School of Witchcraft and Wizardry for their third year of study, where they delve into the mystery surrounding an escaped prisoner who poses a dangerous threat to the young wizard."
+    }
+]
