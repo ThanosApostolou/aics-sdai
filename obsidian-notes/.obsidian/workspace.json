@@ -91,7 +91,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
+                "file": "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9be711b74fc452c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson2-20230403.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +112,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -165,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md"
+                "file": "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson2-20230403.md"
               }
             }
           }
@@ -181,7 +194,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
+                "file": "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson2-20230403.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -216,7 +229,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
+                "file": "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson2-20230403.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -233,7 +246,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
+                "file": "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson2-20230403.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -268,18 +281,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5e880ac69f5a2ce6",
+  "active": "65086b228cabbbfc",
   "lastOpenFiles": [
+    "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
+    "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
+    "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson2-20230403.md",
     "sem2/4_Social-Networks-Analysis/4_Social-Networks-Analysis.md",
     "sem2/3_Advanced-Deep-Learning-with-Python/3_Advanced-Deep-Learning-with-Python.md",
-    "sem2/4_Social-Networks-Analysis/Lesson2-20230328.md",
     "sem2/4_Social-Networks-Analysis/Lesson1-20230321.md",
     "sem2/4_Social-Networks-Analysis/Untitled",
     "sem2/4_Social-Networks-Analysis",
     "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/1_Artificial-Intelligence-and-Microservices-in-Web.md",
     "sem2/3_Advanced-Deep-Learning-with-Python/Lesson2-20230328.md",
     "sem2/3_Advanced-Deep-Learning-with-Python/Lesson1-20230321.md",
-    "sem2/1_Artificial-Intelligence-and-Microservices-in-Web/Lesson1-20230327.md",
     "sem2/3_Advanced-Deep-Learning-with-Python",
     "sem1/3-WebDevelopment/3-WebDevelopment.md",
     "sem1/6-ArtificialIntelligence/6-ArtificialIntelligence.md",
