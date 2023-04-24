@@ -30,6 +30,7 @@ nb-configuration.xml
 .air.toml
 proguard/
 !**/src/**/proguard/
+**/.obsidian/workspace.json
 
 ## rust
 debug/
