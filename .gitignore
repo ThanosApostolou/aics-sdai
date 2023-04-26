@@ -177,3 +177,6 @@ dmypy.json
 
 .~lock.*.docx#
 .~lock.*.odt#
+
+# Large files
+uber_lda_100_vectors.mat
