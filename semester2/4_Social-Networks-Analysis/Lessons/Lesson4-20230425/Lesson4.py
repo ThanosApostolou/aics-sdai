@@ -10,8 +10,14 @@ import scipy.io
 import os
 import os.path
 import pandas as pd
+import networkx as nx
+import networkx.drawing
+import networkx.generators
+import networkx.utils
+import networkx.algorithms
 
 DATAFILES_DIR = "./DataFiles"
+OUTPUT_DIR = "./output"
 YEARS = {
     2002,
     2003,
@@ -46,7 +52,7 @@ def apply_mat_element(element):
 def df_from_mat_or_csv(file_name: str, var_key: str) -> pd.DataFrame:
     csv_file = os.path.join(DATAFILES_DIR, f"{file_name}.csv")
     if os.path.exists(csv_file):
-        df = pd.read_csv(csv_file)
+        df = pd.read_csv(csv_file, encoding='utf-8', index_col=0, header=0)
         return df
     else:
         mat_file = os.path.join(DATAFILES_DIR, f"{file_name}.mat")
@@ -60,7 +66,8 @@ def df_from_mat_or_csv(file_name: str, var_key: str) -> pd.DataFrame:
         for column in df.columns:
             df[column] = df[column].apply(apply_mat_element)
 
-        df.to_csv(csv_file)
+        print(f"{file_name}, df.shape", df.shape)
+        df.to_csv(csv_file, encoding='utf-8', index=True, header=True)
         return df
 
 
@@ -94,13 +101,55 @@ def create_Wo(W: np.ndarray) -> np.ndarray:
     return Wo
 
 
+# def show_graph_with_labels(adjacency_matrix, mylabels):
+#     rows, cols = np.where(adjacency_matrix == 1)
+#     edges = zip(rows.tolist(), cols.tolist())
+#     gr = nx.Graph()
+#     all_rows = range(0, adjacency_matrix.shape[0])
+#     for n in all_rows:
+#         gr.add_node(n)
+#     gr.add_edges_from(edges)
+#     nx.draw(gr, node_size=900, labels=mylabels, with_labels=True)
+#     plt.show()
+
+def plot_graph(G: nx.classes.Graph):
+    plt.figure(1)
+    plt.suptitle("Graph")
+    nx.drawing.draw_networkx(G, with_labels=True)
+    figure_file = os.path.join(OUTPUT_DIR, "graph_plot.png")
+    plt.savefig(figure_file)
+
+    largest_components = sorted(
+        nx.connected_components(G), key=len, reverse=True)[:64]
+
+    plt.figure(2)
+    plt.suptitle("Graph's 64 largest Connected Components")
+    n = len(largest_components)
+    root = math.ceil(math.sqrt(len(largest_components)))
+    for i, component in enumerate(largest_components):
+        plt.subplot(root, root, i+1)
+        H = G.subgraph(component)
+        nx.drawing.draw(H, node_size=10, font_size=8)
+
+    figure_file = os.path.join(
+        OUTPUT_DIR, f"graph_connected_components_plot.png")
+    plt.savefig(figure_file)
+    plt.show()
+
+
 def main():
     print("start main")
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR, exist_ok=True)
+
     authors_df, icmb_dfs_dict = load_datafiles()
     W = create_W(icmb_dfs_dict)
     Wo = create_Wo(W)
     print('Wo\n', Wo)
 
+    G = nx.classes.Graph(Wo)
+
+    plot_graph(G)
     print("end main")
 
 
