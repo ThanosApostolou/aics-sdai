@@ -101,40 +101,31 @@ def create_Wo(W: np.ndarray) -> np.ndarray:
     return Wo
 
 
-# def show_graph_with_labels(adjacency_matrix, mylabels):
-#     rows, cols = np.where(adjacency_matrix == 1)
-#     edges = zip(rows.tolist(), cols.tolist())
-#     gr = nx.Graph()
-#     all_rows = range(0, adjacency_matrix.shape[0])
-#     for n in all_rows:
-#         gr.add_node(n)
-#     gr.add_edges_from(edges)
-#     nx.draw(gr, node_size=900, labels=mylabels, with_labels=True)
-#     plt.show()
-
-def plot_graph(G: nx.classes.Graph):
+def plot_graph(G: nx.classes.Graph, max_largest_components: int = 64, name: str = "Graph", with_labels: bool = False, block: bool = False, font_size: int = 6):
     plt.figure(1)
-    plt.suptitle("Graph")
-    nx.drawing.draw_networkx(G, with_labels=True)
-    figure_file = os.path.join(OUTPUT_DIR, "graph_plot.png")
+    plt.suptitle(f"{name}")
+    nx.drawing.draw_networkx(G, with_labels=with_labels,
+                             node_size=30, font_size=font_size)
+    figure_file = os.path.join(OUTPUT_DIR, f"{name}_plot.png")
     plt.savefig(figure_file)
 
     largest_components = sorted(
-        nx.connected_components(G), key=len, reverse=True)[:64]
+        nx.connected_components(G), key=len, reverse=True)[:max_largest_components]
 
     plt.figure(2)
-    plt.suptitle("Graph's 64 largest Connected Components")
+    plt.suptitle(f"{name}: {max_largest_components} largest Connected Components")
     n = len(largest_components)
     root = math.ceil(math.sqrt(len(largest_components)))
     for i, component in enumerate(largest_components):
         plt.subplot(root, root, i+1)
         H = G.subgraph(component)
-        nx.drawing.draw(H, node_size=10, font_size=8)
+        nx.drawing.draw_networkx(H, with_labels=with_labels,
+                                 node_size=10, font_size=font_size)
 
     figure_file = os.path.join(
-        OUTPUT_DIR, f"graph_connected_components_plot.png")
+        OUTPUT_DIR, f"{name}_connected_components_plot.png")
     plt.savefig(figure_file)
-    plt.show()
+    plt.show(block=block)
 
 
 def main():
@@ -148,8 +139,10 @@ def main():
     print('Wo\n', Wo)
 
     G = nx.classes.Graph(Wo)
-
     plot_graph(G)
+
+    # block script so python doesn't exit
+    plt.show()
     print("end main")
 
 
