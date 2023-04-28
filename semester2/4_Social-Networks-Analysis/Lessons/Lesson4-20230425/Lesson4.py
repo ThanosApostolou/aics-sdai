@@ -16,6 +16,7 @@ import networkx.generators
 import networkx.utils
 import networkx.algorithms
 
+EXPECTED_USERS_NUM = 1155
 DATAFILES_DIR = "./DataFiles"
 OUTPUT_DIR = "./output"
 YEARS = {
@@ -135,11 +136,18 @@ def main():
 
     authors_df, icmb_dfs_dict = load_datafiles()
     W = create_W(icmb_dfs_dict)
+    assert W.shape == (EXPECTED_USERS_NUM, EXPECTED_USERS_NUM)
+    
     Wo = create_Wo(W)
+    assert Wo.shape == (EXPECTED_USERS_NUM, EXPECTED_USERS_NUM)
     print('Wo\n', Wo)
 
     G = nx.classes.Graph(Wo)
     plot_graph(G)
+
+    Degrees = np.sum(Wo, axis=1)
+    assert Degrees.shape == (EXPECTED_USERS_NUM, )
+
 
     # block script so python doesn't exit
     plt.show()
