@@ -15,6 +15,7 @@ import networkx.drawing
 import networkx.generators
 import networkx.utils
 import networkx.algorithms
+from DegreeCentralityDistribution import DegreeCentralityDistribution
 
 EXPECTED_USERS_NUM = 1155
 DATAFILES_DIR = "./DataFiles"
@@ -114,7 +115,8 @@ def plot_graph(G: nx.classes.Graph, max_largest_components: int = 64, name: str 
         nx.connected_components(G), key=len, reverse=True)[:max_largest_components]
 
     plt.figure(2)
-    plt.suptitle(f"{name}: {max_largest_components} largest Connected Components")
+    plt.suptitle(
+        f"{name}: {max_largest_components} largest Connected Components")
     n = len(largest_components)
     root = math.ceil(math.sqrt(len(largest_components)))
     for i, component in enumerate(largest_components):
@@ -137,7 +139,7 @@ def main():
     authors_df, icmb_dfs_dict = load_datafiles()
     W = create_W(icmb_dfs_dict)
     assert W.shape == (EXPECTED_USERS_NUM, EXPECTED_USERS_NUM)
-    
+
     Wo = create_Wo(W)
     assert Wo.shape == (EXPECTED_USERS_NUM, EXPECTED_USERS_NUM)
     print('Wo\n', Wo)
@@ -145,9 +147,10 @@ def main():
     G = nx.classes.Graph(Wo)
     plot_graph(G)
 
-    Degrees = np.sum(Wo, axis=1)
+    Degrees: np.ndarray = np.sum(Wo, axis=1)
     assert Degrees.shape == (EXPECTED_USERS_NUM, )
 
+    H = DegreeCentralityDistribution(Degrees, OUTPUT_DIR)
 
     # block script so python doesn't exit
     plt.show()
