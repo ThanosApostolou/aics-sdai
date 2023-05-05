@@ -1,0 +1,12 @@
+{
+  "realm": "AIteam",
+  "auth-server-url": "http://localhost:8080/",
+  "ssl-required": "external",
+  "resource": "eShop",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "2ab085bb-fc6f-458d-87fa-d70d03547d2e"
+  },
+  "use-resource-role-mappings": true,
+  "confidential-port": 0
+}
