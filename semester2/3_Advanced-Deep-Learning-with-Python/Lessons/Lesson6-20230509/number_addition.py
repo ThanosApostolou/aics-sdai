@@ -2,8 +2,8 @@
 # learning problem.
 
 # Import all required python frameworks.
+import tensorflow as tf
 from tensorflow import keras
-from tensorflow.python.keras import layers
 import numpy as np
 from classes.character_table import CharacterTable
 import matplotlib.pyplot as plt
@@ -150,30 +150,30 @@ def main():
             # CASE I: The first LSTM layer is added.
             if len(ENCODE_NEURONS) == 1:
                 # CASE Ia: The first LSTM layer is the only LSTM layer:
-                model.add(layers.LSTM(encoding_neurons,
+                model.add(keras.layers.LSTM(encoding_neurons,
                           input_shape=(MAXLEN, len(DICTIONARY))))
             else:
                 # Case Ib: The first LSTM layer is not the only LSTM layer:
-                model.add(layers.LSTM(encoding_neurons, return_sequences=True,
+                model.add(keras.layers.LSTM(encoding_neurons, return_sequences=True,
                                       input_shape=(MAXLEN, len(DICTIONARY))))
         elif encoding_layer <= len(ENCODE_NEURONS)-2:
-            model.add(layers.LSTM(encoding_neurons, return_sequences=True))
+            model.add(keras.layers.LSTM(encoding_neurons, return_sequences=True))
         else:
-            model.add(layers.LSTM(encoding_neurons))
+            model.add(keras.layers.LSTM(encoding_neurons))
 
     # Add a RepeatVector layer in order to repeat the input according to the number
     # of digits forming the expected answers. That is, at the input level of the
     # decoder, we must repeatedly provide the last output of the RNN for each time
     # step.
-    model.add(layers.RepeatVector(DIGITS + 1))
+    model.add(keras.layers.RepeatVector(DIGITS + 1))
 
     # Add the decoding layers.
     for decoding_layer in DECODE_NEURONS:
-        model.add(layers.LSTM(decoding_layer, return_sequences=True))
+        model.add(keras.layers.LSTM(decoding_layer, return_sequences=True))
 
     # Apply a dense layer to every temporal slice of the input. For each step of
     # the output sequence, this layer will decide which character will be chosen.
-    model.add(layers.Dense(len(DICTIONARY), activation="softmax"))
+    model.add(keras.layers.Dense(len(DICTIONARY), activation="softmax"))
 
     # Compile the model.
     model.compile(loss="categorical_crossentropy",
