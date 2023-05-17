@@ -175,6 +175,11 @@ venv.bak/
 dmypy.json
 .pyre/
 
+## Matlab/Octave
+*.asv
+*.m~
+
+
 .~lock.*.docx#
 .~lock.*.odt#
 
