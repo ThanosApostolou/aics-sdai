@@ -1,0 +1,17 @@
+IDEA
+news fetch by categories
+news categories recommendation by user data
+
+
+IDP: firebase auth
+
+BACKEND:
+    - python
+    - Flask (REST)
+    - SQLAlchemy (ORM)
+    - firebase_admin (https://firebase.google.com/docs/reference/admin/python/firebase_admin.auth)
+
+FRONTEND:
+    - TypeScript
+    - Angular - Angular Material
+    - Angular flex layout (https://github.com/angular/flex-layout)

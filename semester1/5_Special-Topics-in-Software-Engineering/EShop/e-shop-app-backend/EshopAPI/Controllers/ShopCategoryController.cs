@@ -11,10 +11,10 @@ namespace EshopAPI.Controllers
     [ApiController]
     public class ShopCategoryController : Controller
     {
-        private readonly EshopDbv2Context _context;
+        private readonly EshopDbContext _context;
         private readonly IConfiguration _configuration;
 
-        public ShopCategoryController(EshopDbv2Context context, IConfiguration configuration) 
+        public ShopCategoryController(EshopDbContext context, IConfiguration configuration) 
         {
             _context = context;
             _configuration = configuration;

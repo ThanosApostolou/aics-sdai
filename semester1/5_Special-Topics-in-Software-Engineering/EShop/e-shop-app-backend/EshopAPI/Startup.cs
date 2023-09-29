@@ -14,6 +14,7 @@ using System.IO;
 using Microsoft.Extensions.FileProviders;
 using EshopAPI.Models;
 using EshopAPI.Data;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace WebAPI
@@ -30,23 +31,28 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddDbContext<EshopDbv2Context>();
+            services.AddDbContext<EshopDbContext>(options =>
+            {
+                string dbConnectionString = this.Configuration.GetConnectionString("DBConnectionString");
+                Console.WriteLine("dbConnectionString: " + dbConnectionString);
+                var mysqlVersion = ServerVersion.AutoDetect(dbConnectionString);
+                options.UseMySql(dbConnectionString, mysqlVersion);
+            });
 
             //Enable CORS
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod()
-                 .AllowAnyHeader());
+                    .AllowAnyHeader());
             });
 
             //JSON Serializer
             services.AddControllersWithViews()
                 .AddNewtonsoftJson(options =>
-                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft
-                .Json.ReferenceLoopHandling.Ignore)
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft
+                        .Json.ReferenceLoopHandling.Ignore)
                 .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver
-                = new DefaultContractResolver());
+                    = new DefaultContractResolver());
 
             services.AddControllers();
         }
@@ -65,10 +71,7 @@ namespace WebAPI
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 
 
             app.UseStaticFiles(new StaticFileOptions

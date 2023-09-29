@@ -1,13 +1,12 @@
 # Editor directories and files
 .vscode
-.idea/
+.idea
 *.ipr
 *.iml
 *.iws
 *.suo
 *.ntvs*
 *.njsproj
-*.sln
 *.sw?
 .project
 .classpath

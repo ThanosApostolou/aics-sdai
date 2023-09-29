@@ -11,10 +11,10 @@ namespace EshopAPI.Controllers
     [ApiController]
     public class RoleController : Controller
     {
-        private readonly EshopDbv2Context _context;
+        private readonly EshopDbContext _context;
         private readonly IConfiguration _configuration;
 
-        public RoleController(EshopDbv2Context context, IConfiguration configuration) 
+        public RoleController(EshopDbContext context, IConfiguration configuration) 
         {
             _context = context;
             _configuration = configuration;
