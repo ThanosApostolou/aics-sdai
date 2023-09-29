@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "aics-social-networks-analysis"
+version = "0.1.0"
+description = ""
+authors = [
+    "ThanosApostolou <thanosapostolou@outlook.com>",
+    "GeorgeBirb <todo@outlook.com>",
+]
+readme = "README.md"
+packages = [{ include = "social_networks_analysis" }]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+pandas = "~2.0.1"
+numpy = "~1.24.3"
+networkx = "~3.1"
+matplotlib = "~3.7.1"
+scipy = "~1.11.1"
+tensorflow-io-gcs-filesystem = "~0.31"
+tensorflow = "~2.12.0"
+scikit-learn = "~1.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "~2.0.2"
+pytest = "~7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
