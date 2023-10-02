@@ -1,0 +1,59 @@
+<div class="page-container">
+    <mat-card>
+        <form [formGroup]="searchFormGroup">
+            <mat-card-content>
+                <mat-form-field style="margin-right: 0.5rem;">
+                    <mat-label>Category</mat-label>
+                    <mat-select formControlName="category">
+                        <mat-option *ngFor="let category of allCategories" [value]="category">
+                            <mat-icon *ngIf="category === userDetails()?.favorite_category">star</mat-icon>{{category}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field style="margin-right: 0.5rem;">
+                    <mat-label>Country</mat-label>
+                    <mat-select formControlName="country">
+                        <mat-option *ngFor="let country of allCountries" [value]="country">
+                            {{country}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Query</mat-label>
+                    <input formControlName="query" matInput>
+                </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions>
+                <button type="button" mat-raised-button color="primary" (click)="loadData()"
+                    style="margin-right: 0.5rem;">Search</button>
+                <div
+                    matTooltip="{{userDetails()?.favorite_category == null ? 'You need to fill the Questionaire in order to unlock this recommendation feature!' : 'Recommend a category using AI'}}">
+                    <button type="button" mat-raised-button color="primary"
+                        [disabled]="userDetails()?.favorite_category == null" (click)="recommendCategory()">Recommend a
+                        Category</button>
+                </div>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+
+    <mat-spinner *ngIf="isWaitingAsyncResult"></mat-spinner>
+    <div *ngIf="!isWaitingAsyncResult">
+        <div *ngIf="!(hasError === false && fetchNewsResponse != null)">
+            <p>Please fill the required filters and click "Search"</p>
+        </div>
+        <div *ngIf="hasError === false && fetchNewsResponse != null">
+            <div *ngIf="fetchNewsResponse.articles">
+                <div *ngFor="let articleDto of fetchNewsResponse.articles">
+                    <br>
+                    <app-news-article [articleDto]="articleDto" />
+                    <br>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

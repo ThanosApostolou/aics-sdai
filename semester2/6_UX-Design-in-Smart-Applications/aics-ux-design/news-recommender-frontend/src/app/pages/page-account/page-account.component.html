@@ -1,0 +1,4 @@
+<div class="page-container">
+    <app-firebase-ui *ngIf="firebaseUser() == null"></app-firebase-ui>
+    <app-user-account *ngIf="firebaseUser() != null"></app-user-account>
+</div>

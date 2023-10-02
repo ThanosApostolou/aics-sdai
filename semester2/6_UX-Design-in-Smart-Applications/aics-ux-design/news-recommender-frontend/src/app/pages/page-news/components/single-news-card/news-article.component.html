@@ -1,0 +1,35 @@
+<mat-card style="min-width: 10rem; max-width: min(800px,  80%);; margin-left: auto; margin-right: auto;">
+    <mat-card-header>
+        <mat-card-title>
+            {{articleDto.title}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{articleDto.author}}
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image *ngIf="articleDto.urlToImage" src="{{articleDto.urlToImage}}">
+
+    <mat-card-content>
+        <p>{{articleDto.description}}</p>
+        <br>
+        <hr>
+
+        <p>{{articleDto.content}}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <div class="ellipsis">
+            Full article: <a href="{{articleDto.url}}" target="_blank" rel="noopener noreferrer">
+                <mat-icon>open_in_new</mat-icon>{{articleDto.url}}</a>
+        </div>
+    </mat-card-actions>
+
+    <mat-card-footer>
+        <div class="flex-rows" style="padding: 1rem;">
+            <p><i>Published at: {{articleDto.publishedAt}}</i></p>
+            <div class="flex-spacer"></div>
+            <p><i>Source: {{articleDto.source.name}}</i></p>
+        </div>
+    </mat-card-footer>
+</mat-card>

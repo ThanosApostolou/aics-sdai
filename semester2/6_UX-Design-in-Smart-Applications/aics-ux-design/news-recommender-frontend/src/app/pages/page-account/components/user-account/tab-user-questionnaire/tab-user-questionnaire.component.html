@@ -1,0 +1,68 @@
+<mat-card>
+    <mat-card-header>Please fill the questionnaire in order to unlock recommendation features</mat-card-header>
+    <mat-card-content>
+        <form *ngIf="questionnaireFormGroup" [formGroup]="questionnaireFormGroup">
+            <section>
+                <mat-checkbox (change)="isFilledChanged($event)" formControlName="is_filled">Fill
+                    Questionnaire?</mat-checkbox>
+            </section>
+            <hr>
+            <mat-grid-list cols="{{cols}}" rowHeight="{{rowHeight}}:1">
+                <mat-grid-tile>
+                    <div>
+                        <mat-form-field>
+                            <mat-label>Favorite Category</mat-label>
+                            <mat-select formControlName="favorite_category">
+                                <mat-option *ngFor="let category of allCategories" [value]="category">
+                                    {{category}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div>
+                        <div>
+                            <mat-slide-toggle formControlName="is_extrovert">Are you consider yourself an
+                                extrovert?</mat-slide-toggle>
+                        </div>
+                        <div>
+                            <mat-form-field>
+                                <mat-label>Age</mat-label>
+                                <input formControlName="age" matInput min="10" max="100" step="1">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div>
+                        <div>
+                            <mat-label>Education Level</mat-label>
+                            <mat-slider showTickMarks min="1" max="10" step="1" discrete>
+                                <input formControlName="educational_level" matSliderThumb>
+                            </mat-slider>
+                        </div>
+                        <div>
+                            <mat-label>Sports Interest</mat-label>
+                            <mat-slider showTickMarks min="1" max="10" step="1" discrete>
+                                <input formControlName="sports_interest" matSliderThumb>
+                            </mat-slider>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div>
+                        <mat-label>Arts Interest</mat-label>
+                        <mat-slider showTickMarks min="1" max="10" step="1" discrete>
+                            <input formControlName="arts_interest" matSliderThumb>
+                        </mat-slider>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="primary" (click)="onSaveClicked()">Save</button>
+    </mat-card-actions>
+</mat-card>

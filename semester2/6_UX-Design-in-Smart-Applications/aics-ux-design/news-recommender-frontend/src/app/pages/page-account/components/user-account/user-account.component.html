@@ -1,0 +1,15 @@
+<mat-spinner *ngIf="isPageLoading"></mat-spinner>
+<mat-tab-group *ngIf="!isPageLoading && accountDetails && accountDetailsForm && questionnaireFormGroup">
+    <mat-tab label="User Details">
+        <app-tab-user-details [accountDetailsForm]="accountDetailsForm"></app-tab-user-details>
+    </mat-tab>
+    <mat-tab label="Questionnaire">
+        <app-tab-user-questionnaire [accountDetailsForm]="accountDetailsForm"
+            [questionnaireFormGroup]="questionnaireFormGroup"
+            (saveClicked)="onSaveClicked()"></app-tab-user-questionnaire>
+    </mat-tab>
+
+    <div *ngIf="errors?.length">
+        <mat-error *ngFor="let error of errors">{{error}}</mat-error>
+    </div>
+</mat-tab-group>

@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-root {
+    display: block;
+    height: 100%;
+}
+
+.flex-spacer {
+    flex: 1 1 auto;
+}
+
+.flex-columns {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-rows {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-container {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.ellipsis {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 50%;
+}
