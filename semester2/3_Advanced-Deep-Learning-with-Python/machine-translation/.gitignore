@@ -1,0 +1,15 @@
+/tf_env/classes/.idea/
+/tf_env/bin
+/tf_env/datasets/.idea/
+/tf_env/include
+/tf_env/lib
+/.idea/vcs.xml
+/tf_env/pyvenv.cfg
+/tf_env/figures/.idea/inspectionProfiles/Project_Default.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/tf_env/figures/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/misc.xml
+/tf_env/figures/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/modules.xml
+/tf_env/figures/.idea/workspace.xml
